@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achievements | Dr. Dumakude</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      /* Header */
+      header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      /* Achievements Section */
+      .achievements {
+        text-align: center;
+        padding: 100px 20px 40px;
+        background-color: white;
+      }
+
+      .achievement-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .achievement-item {
+        width: 300px;
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .achievement-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      .achievement-item h2 {
+        margin-top: 10px;
+      }
+
+      .achievement-item p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    }
+    /*Footer Section */
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    footer a {
+      color: #f4a261;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    footer a:hover {
+      text-decoration-line: underline;
+      color: #e76f51;
+    }
+
+      /* Scroll Reveal */
+      .visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">Dr. Dumakude</div>
+      <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html">Products</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="review.html">Reviews</a></li>
+        </ul>
+        
+    </nav>
+    </header>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+      <h1>Achievements of Dr. Dumakude</h1>
+      <div class="achievement-list">
+        <!-- Achievement 1 -->
+        <div class="achievement-item">
+          <img src="images-4.jpeg" alt="Dr. Dumakude's Book" />
+          <h2>Published Author</h2>
+          <p>
+            Dr. Dumakude is the author of the book "Ukumbulelwa Ngedlozi",
+            sharing his insights into traditional healing practices.
+          </p>
+        </div>
+        <!-- Achievement 2 -->
+        <div class="achievement-item">
+          <img src="img.jpg" alt="Dr. Dumakude on VOW FM" />
+          <h2>Media Appearances</h2>
+          <p>
+            Featured on various media platforms, including a notable appearance
+            on VOW FM, discussing traditional healing and spirituality.
+          </p>
+        </div>
+        <!-- Achievement 3 -->
+        <div class="achievement-item">
+          <img
+            src="images-6.jpeg"
+            alt="Mr. South Africa Contest"
+          />
+          <h2>Mr. South Africa 2024 Contestant</h2>
+          <p>
+            Recognized as a top contestant in the Mr. South Africa 2024
+            competition, showcasing his commitment to personal development and
+            community engagement.
+          </p>
+        </div>
+        <!-- Achievement 4 -->
+        <div class="achievement-item">
+          <img
+            src="about.jpg"
+            alt="Dr. Dumakude on Social Media"
+          />
+          <h2>Social Media Influence</h2>
+          <p>
+            With a substantial following on platforms like Facebook and
+            Instagram, Dr. Dumakude educates and inspires a broad audience on
+            traditional healing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="foot-container"
+      <p>© 2025 Dr. Dumakude | All Rights Reserved.</p>
+      <p>Designed and Developed by <a href="https://www.kammnyamana.com" target="_blank">Kam Mnyamana</a></p>
+    </div>
+    </footer>
+  </body>
+</html>

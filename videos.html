@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device=width, initial-scale=1.0" />
+    <title>Dr. Dumakude's Video Gallery</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      .video-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+      .video-item {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        max-width: 320px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .video-item:hover {
+        transform: translateY(-10px);
+      }
+      .video-item img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .video-item h3 {
+        font-size: 18px;
+        margin: 10px;
+        color: #333;
+      }
+      .video-item p {
+        font-size: 14px;
+        margin: 10px;
+        color: #666;
+      }
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .modal-content {
+        position: relative;
+        margin: 5% auto;
+        padding: 0;
+        width: 80%;
+        max-width: 800px;
+      }
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        color: #fff;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      iframe {
+        width: 100%;
+        height: 450px;
+        border: none;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul li {
+      text-align: center;
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: #333;
+        text-decoration: none;
+        font-size: 18px;
+    }
+/*Footer Section */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+footer a {
+  color: #f4a261;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration-line: underline;
+  color: #e76f51;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Dr. Dumakude's Video Gallery</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="review.html">Reviews</a></li>
+      </ul>
+    </nav>
+    <div class="video-gallery">
+      <!-- Video 1 -->
+      <div
+        class="video-item"
+        data-video="https://www.youtube.com/embed/bNVsbwdDqjA"
+      >
+        <img src="video 1.jpg" alt="Understanding Umdliwa/Isilwane/Ibhadi" />
+        <h3>Understanding Umdliwa/Isilwane/Ibhadi</h3>
+        <p>
+          Dr. Dumakude discusses the concepts of Umdliwa, Isilwane, and Ibhadi.
+        </p>
+      </div>
+      <!-- Video 2 -->
+      <div
+        class="video-item"
+        data-video="https://www.youtube.com/embed/x4H-JzaM0ec"
+      >
+        <img src="Dr D.jpg" alt="Traditional vs. Western Medicine" />
+        <h3>Traditional vs. Western Medicine</h3>
+        <p>Dr. Dumakude and Dr. Masondo explore different medical practices.</p>
+      </div>
+      <!-- Additional video items... -->
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const videoItems = document.querySelectorAll(".video-item");
+        const modal = document.getElementById("videoModal");
+        const videoFrame = document.getElementById("videoFrame");
+        const closeBtn = document.querySelector(".close");
+
+        videoItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            const videoSrc = this.getAttribute("data-video");
+            videoFrame.src = videoSrc;
+            modal.style.display = "block";
+          });
+        });
+
+        closeBtn.addEventListener("click", function () {
+          modal.style.display = "none";
+          videoFrame.src = "";
+        });
+
+        window.addEventListener("click", function (event) {
+          if (event.target === modal) {
+            modal.style.display = "none";
+            videoFrame.src = "";
+          }
+        });
+      });
+    </script>
+    <footer>
+      <p>© 2025 Dr. Dumakude | All Rights Reserved.</p>
+      <p>
+        Designed and Developed by
+        <a href="https://www.kammnyamana.com" target="_blank">Kam Mnyamana</a>
+      </p>
+    </footer>
+  </body>
+</html>
