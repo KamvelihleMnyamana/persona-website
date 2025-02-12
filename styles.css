@@ -7,7 +7,9 @@ body {
   text-align: center;
   font-size: 14px;
   font-weight: bold;
+overflow-x: hidden; 
 }
+
 .profile-img {
   max-width: 100%; /* Ensures image does not exceed screen width */
   height: auto; /* Maintains aspect ratio */
