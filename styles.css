@@ -17,6 +17,14 @@ overflow-x: hidden;
   object-fit: cover; /* Ensures proper fitting */
 }
 
+.banner {
+  width: 100%;
+  height: 50vh; /* Adjust height as needed */
+  background-size: cover; /* Covers entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Avoids repetition */
+}
+
 h1,
 h2,
 h3 {
