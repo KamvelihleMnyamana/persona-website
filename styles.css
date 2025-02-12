@@ -14,12 +14,12 @@ overflow-x: hidden;
   max-width: 100%; /* Ensures image does not exceed screen width */
   height: auto; /* Maintains aspect ratio */
   display: block; /* Prevents extra spacing */
-  object-fit: cover; /* Ensures proper fitting */
+  object-fit: contain; /* Ensures proper fitting */
 }
 
 .banner {
   width: 100%;
-  height: 50vh; /* Adjust height as needed */
+  height: 60vh; /* Adjust height as needed */
   background-size: cover; /* Covers entire section */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Avoids repetition */
