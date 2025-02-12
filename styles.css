@@ -54,6 +54,9 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+  display: inline-block;
+  position: relative;
+  z-index: 9999; /* Ensures links are on top */
 }
 
 .hero {
