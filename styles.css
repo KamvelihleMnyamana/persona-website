@@ -5,12 +5,12 @@ body {
   background-color: #f4f4f4;
   color: #333;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 .profile-img {
   object-fit: cover;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 6px;
 }
@@ -256,4 +256,16 @@ button:hover {
 
 .social-media a:hover {
   background-color: #1a252f;
+}
+@media (max-width:768px) 
+body {
+  font-size: 14px;
+}
+.container{
+  width: 100%;
+  padding:10px
+}
+.img {
+  max-width: 100%;
+height:auto;
 }
