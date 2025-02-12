@@ -14,7 +14,7 @@ body {
   display: block; /* Prevents extra spacing */
   object-fit: cover; /* Ensures proper fitting */
 }
-}
+
 h1,
 h2,
 h3 {
