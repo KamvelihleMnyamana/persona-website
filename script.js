@@ -73,3 +73,30 @@ document.addEventListener("DOMContentLoaded", function () {
   whatsappButton.target = "_blank";
   document.body.appendChild(whatsappButton);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".nav-links a"); 
+    const content = document.getElementById("content"); 
+
+    links.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent full page reload
+            const page = this.getAttribute("href"); // Get the link href
+            
+            // Fetch the requested page content
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    content.innerHTML = data; // Load content inside #content div
+                    updateActiveLink(this); // Update active link styling
+                })
+                .catch(error => console.error("Error loading page:", error));
+        });
+    });
+
+    // Function to highlight active link
+    function updateActiveLink(activeLink) {
+        links.forEach(link => link.classList.remove("active"));
+        activeLink.classList.add("active");
+    }
+});
