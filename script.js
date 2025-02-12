@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* WhatsApp Floating Button */
   const whatsappButton = document.createElement("a");
-  whatsappButton.href = "https://wa.me/27123456789";
+  whatsappButton.href = "https://wa.me/+27762731851";
   whatsappButton.classList.add("whatsapp-float");
   whatsappButton.innerHTML = `<i class="fab fa-whatsapp"></i>`;
   whatsappButton.target = "_blank";
