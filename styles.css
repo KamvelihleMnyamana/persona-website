@@ -268,3 +268,13 @@ button:hover {
 .social-media a:hover {
   background-color: #1a252f;
 }
+@media (max-width: 768px) {
+  .banner {
+    height: 30vh; /* Reduce image height on smaller screens */
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
