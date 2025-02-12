@@ -9,10 +9,11 @@ body {
   font-weight: bold;
 }
 .profile-img {
-  object-fit: cover;
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
+  max-width: 100%; /* Ensures image does not exceed screen width */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Prevents extra spacing */
+  object-fit: cover; /* Ensures proper fitting */
+}
 }
 h1,
 h2,
@@ -256,16 +257,4 @@ button:hover {
 
 .social-media a:hover {
   background-color: #1a252f;
-}
-@media (max-width:768px) 
-body {
-  font-size: 14px;
-}
-.container{
-  width: 100%;
-  padding:10px
-}
-.img {
-  max-width: 100%;
-height:auto;
 }
